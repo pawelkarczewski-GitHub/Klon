@@ -10,6 +10,9 @@ import java.util.stream.Collectors;
 
 public class MovieLibrary {
     private static List<Movie> moviesLibrary;
+    public void fillMovieListFromFile() {
+
+    }
 
     public void fillMovieList() {
         moviesLibrary = new ArrayList<>();
@@ -29,6 +32,7 @@ public class MovieLibrary {
         Actor u_Thurman = new Actor("Uma", "Thurman");
         Actor h_Keitel = new Actor("Harvey", "Keitel");
         Actor t_Cruze = new Actor("Tom", "Cruise");
+
 
         moviesLibrary.add(new Movie("Gladiator",r_Scott, List.of(r_Crowe, j_Deep)));
         moviesLibrary.add(new Movie("Pirates of the Caribbean",g_Verbinski, List.of(o_Reed, j_Deep)));

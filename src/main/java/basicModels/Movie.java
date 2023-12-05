@@ -67,4 +67,17 @@ public class Movie {
     public void setCategory(char category) {
         this.category = category;
     }
+
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", budget=" + budget +
+                ", isOnMyList=" + isOnMyList +
+                ", rating=" + rating +
+                ", category=" + category +
+                '}';
+    }
 }

@@ -10,9 +10,20 @@
 
     <properties>
         <jackson.version>2.13.0</jackson.version>
-        
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <logback.version>1.4.6</logback.version>
+        <logback.jakcson.verion>0.1.5</logback.jakcson.verion>
+        <logstash.version>7.3</logstash.version>
+        <selenium.version>4.8.1</selenium.version>
+        <junit.version>5.9.2</junit.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <assertJ.version>3.24.2</assertJ.version>
+        <lombok.version>1.18.26</lombok.version>
+        <surefire.version>3.0.0-M9</surefire.version>
+        <jackson.version>2.14.2</jackson.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     </properties>
 
     <dependencies>
@@ -22,7 +33,35 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.jupiter</groupId>
+                        <artifactId>junit-jupiter-engine</artifactId>
+                        <version>${junit.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
